@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Portfólio | Amós Desenvolvedor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <style>
+    /* Básico para o seletor de idioma */
+    #lang-selector {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #222;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-family: sans-serif;
+      cursor: pointer;
+      user-select: none;
+      z-index: 9999;
+    }
+    #lang-selector select {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Seletor de idioma -->
+  <div id="lang-selector">
+    <label for="language-select" style="margin-right:6px;">Idioma:</label>
+    <select id="language-select" aria-label="Selecionar idioma">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+
+
+  <header>
+    <div class="container">
+      <h1 data-i18n="header_title">Amós Desenvolvedor</h1>
+     <nav>
+   <a href="#sobre" data-i18n="nav_inicio">Início</a>
+        <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+        <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
+        <a href="#contato" data-i18n="nav_contato">Contato</a>
+  <button id="toggle-theme" aria-label="Trocar tema">🌙</button>
+</nav>
+
+
+    </div>
+  </header>
+
+  <section id="sobre" >
+    <div class="container">
+      <h2 data-i18n="sobre_titulo">Sobre Mim</h2>
+      <p data-i18n="sobre_texto" class="fade">
+        Sou desenvolvedor com experiência em Node.js, Java (SE) e tecnologias web como HTML, CSS e JavaScript.
+        Atuo com desenvolvimento de jogos em Java SE, criação de sites institucionais, <strong>sites de serviços</strong>, formulários digitais e lojas virtuais com a plataforma Nuvemshop.
+        Gosto de resolver problemas com código e estou sempre buscando novos desafios e aprendizados.
+      </p>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="container">
+      <h2 data-i18n="projetos_titulo">Projetos</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 data-i18n="proj_tradingbot_titulo">Trading Bot Java</h3>
+          <p data-i18n="proj_tradingbot_desc">Bot de trading usando Java SE e Binance API, com interface JavaFX.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="proj_jogojava_titulo">Jogo Java SE</h3>
+          <p data-i18n="proj_jogojava_desc">Jogo 2D simples desenvolvido em Java puro, com lógica de colisão e placar.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="proj_siteinst_titulo">Site Institucional</h3>
+          <p data-i18n="proj_siteinst_desc">Criação de site empresarial com HTML5, CSS3 e formulário de contato.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="proj_lojanuvem_titulo">Loja Virtual Nuvemshop</h3>
+          <p data-i18n="proj_lojanuvem_desc">Setup completo de loja virtual com design personalizado e integração de pagamentos.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="proj_siteserv_titulo">Site de Serviços</h3>
+          <p data-i18n="proj_siteserv_desc">Desenvolvimento de site para prestadores de serviços, com agendamento e áreas específicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="container">
+      <h2 data-i18n="habilidades_titulo">Habilidades</h2>
+      <ul class="skills icons-grid">
+        <li><i class="devicon-nodejs-plain colored"></i> <span data-i18n="skill_nodejs">Node.js</span></li>
+        <li><i class="devicon-java-plain colored"></i> <span data-i18n="skill_java">Java SE</span></li>
+        <li><i class="devicon-html5-plain colored"></i> <span data-i18n="skill_html">HTML5</span></li>
+        <li><i class="devicon-css3-plain colored"></i> <span data-i18n="skill_css">CSS3</span></li>
+        <li><i class="devicon-javascript-plain colored"></i> <span data-i18n="skill_js">JavaScript</span></li>
+        <li><i class="devicon-mongodb-plain colored"></i> <span data-i18n="skill_mongodb">MongoDB</span></li>
+        <li><i class="devicon-mysql-plain colored"></i> <span data-i18n="skill_mysql">MySQL</span></li>
+      </ul>
+    </div>
+  </section>
+
+  
+
+  <section id="contato">
+    <div class="container">
+      <h2 data-i18n="contato_titulo">Contato</h2>
+      <form action="https://formsubmit.co/amos.desenvolvedor@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" data-i18n-placeholder="contato_nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" data-i18n-placeholder="contato_email" required />
+        <textarea name="message" placeholder="Sua mensagem" rows="5" data-i18n-placeholder="contato_mensagem" required></textarea>
+        <button type="submit" data-i18n="contato_enviar">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Amós Mendes de Oliveira. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dicionário de traduções
+    const translations = {
+      pt: {
+        title: "Portfólio | Amós Desenvolvedor",
+        header_title: "Amós Desenvolvedor",
+        nav_inicio: "Início",
+        nav_projetos: "Projetos",
+        nav_habilidades: "Habilidades",
+        nav_contato: "Contato",
+        sobre_titulo: "Sobre Mim",
+        sobre_texto: `Sou desenvolvedor com experiência em Node.js, Java (SE) e tecnologias web como HTML, CSS e JavaScript.
+        Atuo com desenvolvimento de jogos em Java SE, criação de sites institucionais, <strong>sites de serviços</strong>, formulários digitais e lojas virtuais com a plataforma Nuvemshop.
+        Gosto de resolver problemas com código e estou sempre buscando novos desafios e aprendizados.`,
+        projetos_titulo: "Projetos",
+        proj_tradingbot_titulo: "Trading Bot Java",
+        proj_tradingbot_desc: "Bot de trading usando Java SE e Binance API, com interface JavaFX.",
+        proj_jogojava_titulo: "Jogo Java SE",
+        proj_jogojava_desc: "Jogo 2D simples desenvolvido em Java puro, com lógica de colisão e placar.",
+        proj_siteinst_titulo: "Site Institucional",
+        proj_siteinst_desc: "Criação de site empresarial com HTML5, CSS3 e formulário de contato.",
+        proj_lojanuvem_titulo: "Loja Virtual Nuvemshop",
+        proj_lojanuvem_desc: "Setup completo de loja virtual com design personalizado e integração de pagamentos.",
+        proj_siteserv_titulo: "Site de Serviços",
+        proj_siteserv_desc: "Desenvolvimento de site para prestadores de serviços, com agendamento e áreas específicas.",
+        habilidades_titulo: "Habilidades",
+        skill_nodejs: "Node.js",
+        skill_java: "Java SE",
+        skill_html: "HTML5",
+        skill_css: "CSS3",
+        skill_js: "JavaScript",
+        skill_mongodb: "MongoDB",
+        skill_mysql: "MySQL",
+        contato_titulo: "Contato",
+        contato_nome: "Seu nome",
+        contato_email: "Seu e-mail",
+        contato_mensagem: "Sua mensagem",
+        contato_enviar: "Enviar",
+      },
+      en: {
+        title: "Portfolio | Amós Developer",
+        header_title: "Amós Developer",
+        nav_inicio: "Home",
+        nav_projetos: "Projects",
+        nav_habilidades: "Skills",
+        nav_contato: "Contact",
+        sobre_titulo: "About Me",
+        sobre_texto: `I'm a developer experienced with Node.js, Java (SE) and web technologies like HTML, CSS, and JavaScript.
+        I work on Java SE game development, institutional websites, <strong>service sites</strong>, digital forms and virtual stores with the Nuvemshop platform.
+        I enjoy solving problems with code and am always looking for new challenges and learning.`,
+        projetos_titulo: "Projects",
+        proj_tradingbot_titulo: "Trading Bot Java",
+        proj_tradingbot_desc: "Trading bot using Java SE and Binance API, with JavaFX interface.",
+        proj_jogojava_titulo: "Java SE Game",
+        proj_jogojava_desc: "Simple 2D game developed in pure Java, with collision logic and scoring.",
+        proj_siteinst_titulo: "Institutional Website",
+        proj_siteinst_desc: "Company website creation with HTML5, CSS3 and contact form.",
+        proj_lojanuvem_titulo: "Nuvemshop Virtual Store",
+        proj_lojanuvem_desc: "Complete setup of a virtual store with customized design and payment integration.",
+        proj_siteserv_titulo: "Service Website",
+        proj_siteserv_desc: "Development of a website for service providers, with scheduling and specific areas.",
+        habilidades_titulo: "Skills",
+        skill_nodejs: "Node.js",
+        skill_java: "Java SE",
+        skill_html: "HTML5",
+        skill_css: "CSS3",
+        skill_js: "JavaScript",
+        skill_mongodb: "MongoDB",
+        skill_mysql: "MySQL",
+        contato_titulo: "Contact",
+        contato_nome: "Your name",
+        contato_email: "Your email",
+        contato_mensagem: "Your message",
+        contato_enviar: "Send",
+      }
+    };
+
+    function translatePage(lang) {
+      document.documentElement.lang = lang;
+
+      // Traduzir textos que usam data-i18n
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Traduzir placeholders
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if(translations[lang][key]) {
+          el.setAttribute("placeholder", translations[lang][key]);
+        }
+      });
+
+      // Atualizar título da aba
+      if(translations[lang]["title"]) {
+        document.title = translations[lang]["title"];
+      }
+    }
+
+    // Evento para trocar idioma via select
+    document.getElementById("language-select").addEventListener("change", e => {
+      translatePage(e.target.value);
+    });
+
+    // Detectar idioma padrão do navegador e aplicar
+    const userLang = navigator.language || navigator.userLanguage;
+    if(userLang.startsWith("en")) {
+      document.getElementById("language-select").value = "en";
+      translatePage("en");
+    } else {
+      document.getElementById("language-select").value = "pt";
+      translatePage("pt");
+    }
+
+    // Tema da pagina
+  const toggleBtn = document.getElementById('toggle-theme');
+  const body = document.body;
+
+  // Carregar preferência salva
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '🌙';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const isLight = body.classList.contains('light-mode');
+    toggleBtn.textContent = isLight ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+
+
+  </script>
+</body>
+</html>

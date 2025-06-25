@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00bcd4;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeInCard 0.8s forwards;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0,188,212,0.5);
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skills li {
+  background: #feffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  resize: vertical;
+}
+
+button {
+  background-color: #00bcd4;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0196a6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #aaa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+  to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+.icons-grid li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease;
+}
+
+.icons-grid i {
+  font-size: 24px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.icons-grid li:hover {
+  transform: scale(1.08);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Seletor de idioma */
+#lang-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 12px;
+  z-index: 1000;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#lang-selector label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+#language-select {
+  background-color: transparent;
+  color: #00bcd4;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  outline: none;
+}
+
+#language-select option {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Botão tema */
+#toggle-theme {
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#toggle-theme:hover {
+  transform: scale(1.2);
+}
+
+/* Modo claro */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #222;
+}
+
+body.light-mode .card,
+body.light-mode input,
+body.light-mode textarea {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.light-mode nav a {
+  color: #222;
+}
+
+body.light-mode nav a:hover {
+  color: #00bcd4;
+}
+
+body.light-mode .skills li {
+  background-color: #000;
+  color: #fff;
+}
+
+
+/* Cor principal preta no modo claro */
+body.light-mode h2 {
+  color: #000;
+}
+
+/* Links no modo claro */
+body.light-mode nav a {
+  color: #000;
+  transition: color 0.3s;
+}
+
+body.light-mode nav a:hover {
+  color: #444; /* Clareando no hover */
+}
+
+/* Botão de enviar (formulário) no modo claro */
+body.light-mode button {
+  background-color: #000;
+  color: #fff;
+}
+
+body.light-mode button:hover {
+  background-color: #444;
+}
+
+/* Cards no modo claro */
+body.light-mode .card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Habilidades no modo claro */
+body.light-mode .skills li {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .skills li:hover {
+  background: #444;
+}
+
+
+/* Modo claro: header e navegação */
+body.light-mode header {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode header h1 {
+  color: #000;
+}
+
+body.light-mode nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+body.light-mode nav a:hover {
+  color: #444;
+  border-bottom: 2px solid #444;
+}
+
+
+.fade {
+  opacity: 0;
+  animation: fadeInCard 0.8s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
