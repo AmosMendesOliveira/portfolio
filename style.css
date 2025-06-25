@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -364,3 +365,4 @@ body.light-mode nav a:hover {
   animation: fadeInCard 0.8s ease-in-out forwards;
   animation-delay: 0.3s;
 }
+
